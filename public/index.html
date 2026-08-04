@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#18251f" />
+    <title>Juniper &amp; Oak — Seasonal Dining</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero" id="home">
+        <nav class="nav shell" aria-label="Primary navigation">
+          <a class="brand" href="#home"><span>J</span> Juniper <i>&amp;</i> Oak</a>
+          <div class="nav-links">
+            <a href="#story">Our story</a><a href="#menu">Menu</a><a href="#visit">Visit</a>
+          </div>
+          <a class="nav-book" href="#reserve">Reserve a table <b>↗</b></a>
+        </nav>
+        <div class="hero-content shell">
+          <p class="eyebrow light">A neighborhood table in Brooklyn</p>
+          <h1>Gather around<br /><em>something good.</em></h1>
+          <p class="hero-copy">Thoughtful, ingredient-led cooking with a generous pour and a seat for every story.</p>
+          <a class="button cream" href="#reserve">Make a reservation <span>→</span></a>
+        </div>
+        <div class="hero-note">Scroll to explore <span>↓</span></div>
+      </section>
+
+      <section class="intro shell" id="story">
+        <p class="eyebrow">01 / The table is set</p>
+        <div class="intro-grid"><h2>Good food has a way of<br /><em>bringing us home.</em></h2><p>Juniper &amp; Oak is a modern neighborhood restaurant built around the seasons. We cook with the people and places we know best—then make a little room for surprise.</p></div>
+        <div class="stats"><div><strong>2018</strong><span>Serving our neighborhood</span></div><div><strong>11</strong><span>Local farm partners</span></div><div><strong>4.9</strong><span>Average guest rating</span></div></div>
+      </section>
+
+      <section class="menu-section" id="menu">
+        <div class="shell menu-head"><p class="eyebrow">02 / From the kitchen</p><a href="#reserve">View full menu <span>↗</span></a></div>
+        <div class="menu-cards shell">
+          <article class="dish-card card-one"><div class="dish-overlay"><p>First course</p><h3>Charred<br />Spring Peas</h3><span>Mint · ricotta · lemon</span></div></article>
+          <article class="dish-card card-two"><div class="dish-overlay"><p>From the fire</p><h3>Market<br />Fish</h3><span>Fennel · saffron · shellfish</span></div></article>
+          <article class="dish-card card-three"><div class="dish-overlay"><p>To finish</p><h3>Olive Oil<br />Cake</h3><span>Citrus · mascarpone · thyme</span></div></article>
+        </div>
+      </section>
+
+      <section class="reservation shell" id="reserve">
+        <div class="reservation-copy"><p class="eyebrow">03 / Save your seat</p><h2>Come as you are.<br /><em>We'll take care of<br />the rest.</em></h2><p>Reservations are recommended for dinner. For parties of 7 or more, please give us a call.</p><div class="hours"><span>Tuesday—Sunday</span><strong>5:30 pm — 10:30 pm</strong></div></div>
+        <form class="booking-card" id="reservation-form">
+          <div class="form-heading"><span>Reserve a table</span><span class="form-dot"></span></div>
+          <label>Guest name<input required name="customer_name" placeholder="Your full name" autocomplete="name" /></label>
+          <div class="form-row"><label>Date<input required type="date" name="date" /></label><label>Party size<select required name="party_size"><option value="2">2 guests</option><option value="1">1 guest</option><option value="3">3 guests</option><option value="4">4 guests</option><option value="5">5 guests</option><option value="6">6 guests</option></select></label></div>
+          <label>Preferred time<select required name="time"><option value="18:00">6:00 pm</option><option value="18:30">6:30 pm</option><option value="19:00">7:00 pm</option><option value="19:30">7:30 pm</option><option value="20:00">8:00 pm</option><option value="20:30">8:30 pm</option></select></label>
+          <label>Anything we should know? <small>Optional</small><input name="notes" placeholder="Allergies, celebrations, accessibility..." /></label>
+          <button class="button dark" type="submit">Confirm reservation <span>→</span></button>
+          <p id="reservation-status" class="form-status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="concierge" id="visit"><div class="shell concierge-wrap"><div><p class="eyebrow light">Your reservation playground</p><h2>Ask the<br /><em>host stand.</em></h2><p>Try a natural-language question about your reservation data. This panel connects directly to your AI API.</p></div><div class="concierge-box"><div class="terminal-title"><span></span><span></span><span></span>Juniper assistant</div><div class="answer" id="ai-answer">What would you like to know about tonight's reservations?</div><form id="ai-form"><input id="ai-question" placeholder="Which times are busiest?" required /><button aria-label="Ask assistant">↑</button></form><p class="suggestion">Try: “How many guests are booked per day?”</p></div></div></section>
+      <footer class="shell"><a class="brand" href="#home"><span>J</span> Juniper <i>&amp;</i> Oak</a><p>18 Willow Street · Brooklyn, NY</p><p>© 2026</p></footer>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
