@@ -274,7 +274,7 @@ app.post('/ai/query', async (req, res) => {
       });
     }
 
-    // Build prompt
+    // Build final prompt
     const finalPrompt = `
       You are a restaurant analytics assistant.
 
@@ -308,7 +308,7 @@ app.post('/ai/query', async (req, res) => {
     res.json({
       question,
       answer: aiAnswer,
-      data_used: data // optional but great for debugging
+      data_used: data // debug only
     });
 
   } catch (error) {
